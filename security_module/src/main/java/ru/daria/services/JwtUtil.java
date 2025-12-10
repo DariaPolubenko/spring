@@ -12,6 +12,7 @@ import javax.crypto.SecretKey;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+//тестовый комментарий
 
 // access token - короткоживущий токен, 1 час - 1 день
 // refresh token - долгоживущий токен, от 2х недель до месяца
