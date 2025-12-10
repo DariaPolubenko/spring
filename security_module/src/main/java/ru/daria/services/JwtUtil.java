@@ -19,7 +19,8 @@ import java.util.Date;
 // JWT (JSON Web Token) выглядит так: xxxxx.yyyyy.zzzzz, три части, разделенные точками
 // 1. Header (Заголовок): "Это JWT, подписан алгоритмом HMAC-SHA".
 // 2. Payload (Полезная нагрузка): "Этот пропуск выдан userName: "daria", действует до expiration: "10.11.2025 18:00"".
-// 3. Signature (Подпись): Самая важная часть. Это печать и подпись директора завода, созданная с помощью секретного ключа.kjkj lkjljlkj
+// 3. Signature (Подпись): Самая важная часть. Это печать и подпись директора завода, созданная с помощью секретного ключа
+//
 
 @Component // доп логика, у service бизнесс- логика
 public class JwtUtil {
@@ -55,7 +56,6 @@ public class JwtUtil {
                 .verifyWith(getSecretKey()) // Ключ подписи
                 .build()
                 .parseSignedClaims(token); // Проверка
-
     }
 
     public String generateRefreshJwtToken(String userName) {
