@@ -12,6 +12,7 @@ import javax.crypto.SecretKey;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+//тестовый комментарий
 
 // access token - короткоживущий токен, 1 час - 1 день
 // refresh token - долгоживущий токен, от 2х недель до месяца
@@ -20,7 +21,6 @@ import java.util.Date;
 // 1. Header (Заголовок): "Это JWT, подписан алгоритмом HMAC-SHA".
 // 2. Payload (Полезная нагрузка): "Этот пропуск выдан userName: "daria", действует до expiration: "10.11.2025 18:00"".
 // 3. Signature (Подпись): Самая важная часть. Это печать и подпись директора завода, созданная с помощью секретного ключа
-//
 
 @Component // доп логика, у service бизнесс- логика
 public class JwtUtil {
