@@ -56,7 +56,6 @@ public class JwtUtil {
                 .verifyWith(getSecretKey()) // Ключ подписи
                 .build()
                 .parseSignedClaims(token); // Проверка
-
     }
 
     public String generateRefreshJwtToken(String userName) {
